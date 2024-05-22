@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./css/output.css">
         <title>About | Loopstudios</title>
         <script src="js/script.js" defer></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <section id="hero" class="opacity-90">
@@ -99,7 +100,7 @@
         <section id="contact">
             <div class="container mx-auto max-w-6xl flex flex-col md:flex-row min-h-screen md:justify-between p-12 space-y-12 md:space-y-0">
                 <div class="md:pr-12">
-                    <form action="">
+                    <form action="http://httpbin.org/post" method="POST">
                         <div class="space-y-7">
                             <div>
                                 <label for="" class="text-xl">Name:</label><br>
@@ -115,7 +116,9 @@
                                 <textarea name="" id="" class="my-2 p-5 border border-slate-800 w-full text-sm text-center focus:outline-none text-black md:w-72" placeholder="Any message for me?"></textarea>
                             </div>
 
-                            <button class="btn w-full">Send</button>
+                            <div class="g-recaptcha" data-sitekey="6LeLV-QpAAAAADy_IjJshN0gB0yTW2UpWJz7u0HP"></div>
+
+                            <button class="btn w-full" type="submit">Send</button>
                         </div>
                     </form>
                 </div>
